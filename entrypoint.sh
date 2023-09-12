@@ -13,6 +13,6 @@ mkdir /run/sshd
 /usr/sbin/sshd
 
 echo "===> Please copy the following public key to your server:"
-echo /root/.ssh/id_rsa.pub
+cat /root/.ssh/id_rsa.pub
 
 /bin/bash
