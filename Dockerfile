@@ -15,8 +15,9 @@ RUN bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/
 COPY scripts /scripts/
 RUN bash /scripts/install-node.sh && rm /scripts/install-node.sh
 
-WORKDIR /root
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
+
+WORKDIR /root/workspace
 
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
